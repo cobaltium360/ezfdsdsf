@@ -20,7 +20,7 @@
         fetch("https://eotp0j2o6hthpx9.m.pipedream.net",
           {
               method: "POST",
-              body: event.data
+              body: event["data"]
           })
           .then(function(res){ return res.json(); })
           .then(function(data){ console.log(data) })
